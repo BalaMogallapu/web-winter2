@@ -2,7 +2,22 @@
 <html>
 	<head>
 		<title>My Page Title</title>
+		<style>
+			/* This is where we arite CSS */
+
+			table {
+				border-collapse: collapse;
+				/* width: 500px; static style */
+				width: 50%;
+			}
+
+			th,
+			td {
+				border: 1px solid black;
+			}
+		</style>
 	</head>
+
 	<body>
 		<main>
 			<!-- This is the comment notation for HTML (cmd + /) -->
@@ -15,6 +30,50 @@
 			<h5>This is heading 5</h5>
 
 			<h1>Testing Git terminal</h1>
+
+			<!-- Adding styling to the attribute-->
+			<p style="color: violet">This is a paragraph</p>
+			<p>
+				<strong>This is a strong paragraph </strong>
+				This part of paragraph is a not strong.
+			</p>
+
+			<p>
+				<em> This is emphasized paragraph </em>
+				This part is not emphasized.
+			</p>
+
+			<!-- anchor tag-->
+			<a href="https://www.google.com" target="_blank" style="color: violet"> Google </a>
+
+			<!-- <img src="" alt="logo" width="" height=""/> -->
+
+			<table style>
+				<thread>
+					<tr>
+						<th>Company</th>
+						<th>Contract</th>
+						<th>Country</th>
+					</tr>
+				</thread>
+				<tbody>
+					<tr>
+						<td>Albertson</td>
+						<td>Alfred</td>
+						<td>USA</td>
+					</tr>
+					<tr>
+						<td>Amazon</td>
+						<td>Ane</td>
+						<td>USA</td>
+					</tr>
+					<tr>
+						<td>Target</td>
+						<td>Lucy</td>
+						<td>USA</td>
+					</tr>
+				</tbody>
+			</table>
 		</main>
 	</body>
 </html>
