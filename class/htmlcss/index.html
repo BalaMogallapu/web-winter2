@@ -2,63 +2,68 @@
 <html>
 	<head>
 		<title>My Page Title</title>
-		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="index.css" type="text/css" />
 	</head>
 
 	<body>
 		<main>
-			<!-- This is the comment notation for HTML (cmd + /) -->
-			<!-- using proper html tags will provide semantic meaning (semantic html) this will help 
-                screen readers & disabled audiences when using your site -->
+			<!-- This is the comment notation for HTML (ctrl + /) -->
+			<!-- using proper html tags will provide semantic meaning (semantic html) - this will help screen readers & disabled audiences when using your site -->
 			<h1 id="first-h1">This is heading 1</h1>
 			<h1>This is heading 1</h1>
-			<h2>This is heading 2 this comes after H1</h2>
+			<h2>This is heading 2 that comes after an H1</h2>
+			<h2>This is heading 2</h2>
+			<h1>Another h1</h1>
+			<h2>This is heading 2 that comes after an H1</h2>
 			<h2>This is heading 2</h2>
 			<h3 class="text-red">This is red heading 3</h3>
-			<h3 class="text-red text-green">This is red heading 3</h3>
+			<h3 class="text-green text-red">This is red heading 3</h3>
 			<h3>This is heading 3</h3>
 			<h4 class="pink-text">This is heading 4</h4>
 			<h5>This is heading 5</h5>
-			<h6 id="text-orange" class="text-green" style="color: cornflowerblue">This is heading 6</h6>
+			<h6 class="text-green" id="text-orange" style="color: cornflowerblue !important">This is heading 6</h6>
 
-			<!-- Adding styling to the attribute-->
-			<p style="color: violet">This is a paragraph</p>
+			<div class="mock-navigation"></div>
+
+			<!-- Adding style "attribute" to my paragraph tag -->
+			<p style="color: red">This is a paragraph</p>
+			<!-- <b> is just a styling tag (bold) & slightly different semantic meaning, <strong> provides both styling & semantic meaning of high importance -->
 			<p class="pink-text">
-				<strong>This is a strong paragraph </strong>
-				This part of paragraph is a not strong.
+				<strong>This is a strong paragraph</strong>
+				This part of the paragraph is not strong.
 			</p>
 
 			<p>
-				<em> This is emphasized paragraph </em>
-				This part is not emphasized.
+				<em>This is a emphasized paragraph</em>
+				This part of the paragraph is emphasized.
 			</p>
 
-			<!-- anchor tag-->
-			<a href="https://www.google.com" target="_blank" style="color: violet"> Google </a>
+			<!-- <a> tags are anchor tags -->
+			<a href="https://www.google.com" target="_blank" style="color: blue">Google</a>
 
-			<!-- <img src="" alt="logo" width="" height=""/> -->
+			<!-- <img src="" alt="logo" width="" height="" /> -->
+
 			<div>
 				<h2>H2 in Div</h2>
-
 				<ul>
-					<p>This is immidiate child paragraph</p>
+					<p>Paragraph as immediate child of UL will be brown</p>
 					<div>
-						<p>This is paragraph 1</p>
-						<p>This is paragraph 2</p>
-						<p>This is paragraph 3</p>
+						<p>Paragraph 1 in UL</p>
+						<p>Paragraph 2 in UL</p>
+						<p>Paragraph 3 in UL</p>
 					</div>
 				</ul>
-				<p>Paragraph outside UL</p>
+				<p>Paragraph outside of UL</p>
 			</div>
 
 			<table>
-				<thread>
+				<thead>
 					<tr>
 						<th>Company</th>
-						<th>Contract</th>
+						<th>Contact</th>
 						<th>Country</th>
 					</tr>
-				</thread>
+				</thead>
 				<tbody>
 					<tr>
 						<td>Albertson</td>
@@ -67,7 +72,7 @@
 					</tr>
 					<tr>
 						<td>Amazon</td>
-						<td>Ane</td>
+						<td>Anne</td>
 						<td>USA</td>
 					</tr>
 					<tr>
@@ -93,13 +98,20 @@
 			</ol>
 
 			<!-- block vs in-line display -->
-			<!-- Box model (inside-out): content, padding, border, margin -->
+			<!-- Box model (inside out): content, padding, border, margin -->
 			<div class="box1">Box 1</div>
 			<div class="box1">Box 2</div>
 			<div>
 				The quick
 				<span style="color: brown; font-weight: 900">brown</span>
 				fox jumped over the lazy dog.
+			</div>
+
+			<!-- CSS positions -->
+			<h2>CSS POSITIONS</h2>
+			<div class="box-a">
+				<div class="box-b"></div>
+				<div class="box-c"></div>
 			</div>
 		</main>
 	</body>

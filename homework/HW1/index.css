@@ -1,0 +1,46 @@
+.box-a {
+	width: 100%;
+	height: 600px;
+	border: 1px solid black;
+	position: relative;
+	/* margin-bottom: 5px; */
+}
+
+.box-b {
+	width: 100%;
+	height: 50px;
+	font-size: 8mm;
+	font-style: normal;
+	text-align: justify;
+	background-color: rgb(33, 19, 104);
+	position: sticky;
+	top: 0px;
+	/* margin-bottom: 5px; */
+	/* padding: 5px; */
+}
+
+.box-c {
+	width: 100%;
+	height: 25px;
+	font-size: 5mm;
+	background-color: rgb(93, 125, 201);
+	position: sticky;
+}
+
+.texthead {
+	padding: 5px;
+	text-align-last: left;
+}
+
+.textpara1 {
+	padding: 1px;
+}
+
+.line {
+	border-bottom: 2px sloid #ccc;
+	display: block;
+}
+
+.textpara2 {
+	padding: 1px;
+}
