@@ -2,20 +2,7 @@
 <html>
 	<head>
 		<title>My Page Title</title>
-		<style>
-			/* This is where we arite CSS */
-
-			table {
-				border-collapse: collapse;
-				/* width: 500px; static style */
-				width: 50%;
-			}
-
-			th,
-			td {
-				border: 1px solid black;
-			}
-		</style>
+		<link rel="stylesheet" href="index.css" />
 	</head>
 
 	<body>
@@ -23,17 +10,20 @@
 			<!-- This is the comment notation for HTML (cmd + /) -->
 			<!-- using proper html tags will provide semantic meaning (semantic html) this will help 
                 screen readers & disabled audiences when using your site -->
+			<h1 id="first-h1">This is heading 1</h1>
 			<h1>This is heading 1</h1>
+			<h2>This is heading 2 this comes after H1</h2>
 			<h2>This is heading 2</h2>
+			<h3 class="text-red">This is red heading 3</h3>
+			<h3 class="text-red text-green">This is red heading 3</h3>
 			<h3>This is heading 3</h3>
-			<h4>This is heading 4</h4>
+			<h4 class="pink-text">This is heading 4</h4>
 			<h5>This is heading 5</h5>
-
-			<h1>Testing Git terminal</h1>
+			<h6 id="text-orange" class="text-green" style="color: cornflowerblue">This is heading 6</h6>
 
 			<!-- Adding styling to the attribute-->
 			<p style="color: violet">This is a paragraph</p>
-			<p>
+			<p class="pink-text">
 				<strong>This is a strong paragraph </strong>
 				This part of paragraph is a not strong.
 			</p>
@@ -47,8 +37,21 @@
 			<a href="https://www.google.com" target="_blank" style="color: violet"> Google </a>
 
 			<!-- <img src="" alt="logo" width="" height=""/> -->
+			<div>
+				<h2>H2 in Div</h2>
 
-			<table style>
+				<ul>
+					<p>This is immidiate child paragraph</p>
+					<div>
+						<p>This is paragraph 1</p>
+						<p>This is paragraph 2</p>
+						<p>This is paragraph 3</p>
+					</div>
+				</ul>
+				<p>Paragraph outside UL</p>
+			</div>
+
+			<table>
 				<thread>
 					<tr>
 						<th>Company</th>
@@ -74,6 +77,30 @@
 					</tr>
 				</tbody>
 			</table>
+
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+				<li>React</li>
+			</ul>
+
+			<ol>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+				<li>React</li>
+			</ol>
+
+			<!-- block vs in-line display -->
+			<!-- Box model (inside-out): content, padding, border, margin -->
+			<div class="box1">Box 1</div>
+			<div class="box1">Box 2</div>
+			<div>
+				The quick
+				<span style="color: brown; font-weight: 900">brown</span>
+				fox jumped over the lazy dog.
+			</div>
 		</main>
 	</body>
 </html>

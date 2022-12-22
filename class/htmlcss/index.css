@@ -1,0 +1,77 @@
+/* This is where we arite CSS */
+/*  CSS selector priority: important>style>id>class */
+/* "*" is the select-all selector throughout the page to all elements*/
+* {
+	font-size: 32x;
+}
+/* id selector */
+#first-h1 {
+	color: blueviolet;
+}
+
+#text-orange {
+	color: orange;
+}
+/* class selector */
+/* between multiple class names, the last class will override any previous classstyle */
+.text-red {
+	color: red;
+}
+
+.text-green {
+	color: green;
+}
+
+p.pink-text {
+	color: pink;
+}
+/* HTML tag selector */
+
+/* descendent selector */
+ul p {
+	color: gray;
+}
+/* immediate child selector */
+ul > p {
+	color: brown;
+}
+
+/* descendent selector */
+/* ul p {
+				color: gray;
+			} */
+/* div p {
+				color: green;
+			} */
+
+/* adjacent slector "+" (the h2 that comes after h1) */
+h1 + h2 {
+	color: yellow;
+}
+
+/* html tag selector */
+table {
+	border-collapse: collapse;
+	/* width: 500px; static style */
+	width: 50%;
+}
+
+th,
+td {
+	border: 1px solid black;
+}
+
+ul {
+	list-style: none;
+}
+
+ol {
+	list-style: upper-roman;
+}
+.box1 {
+	/* width: 50px;
+	height: 50px; */
+	padding: 20px;
+	border: 10px solid black;
+	margin-bottom: 15px;
+}
