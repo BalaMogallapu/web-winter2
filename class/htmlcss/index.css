@@ -1,19 +1,22 @@
-/* This is where we arite CSS */
-/*  CSS selector priority: important>style>id>class */
-/* "*" is the select-all selector throughout the page to all elements*/
-* {
-	font-size: 32x;
-}
-/* id selector */
+/* This is where we write CSS (cascading stylesheet) - notice, my comment notation is different */
+/* CSS selector priority: (last) class < id < style attribute < !important - 2 or more !important flag will neutralize and return it back to the original selector priority */
+
+/* "*" is the "select-all" selector - all styling defined here will apply to all elements */
+/* * {
+				font-size: 32px;
+			} */
+
+/* # id selector (id is unique) */
 #first-h1 {
-	color: blueviolet;
+	color: blue;
 }
 
 #text-orange {
-	color: orange;
+	color: orange !important;
 }
-/* class selector */
-/* between multiple class names, the last class will override any previous classstyle */
+
+/* . class selector (apply the same styling to a group of elements of the same class name) */
+/* between multiple class names, the last class will override any previous (class) style */
 .text-red {
 	color: red;
 }
@@ -22,43 +25,39 @@
 	color: green;
 }
 
+/* element.class selector */
 p.pink-text {
 	color: pink;
 }
-/* HTML tag selector */
 
-/* descendent selector */
+/* descendent selector "space" (all p tags that exist in a div) */
 ul p {
-	color: gray;
+	color: green;
 }
-/* immediate child selector */
+
+/* (immediate) children selector ">" */
 ul > p {
 	color: brown;
 }
 
-/* descendent selector */
-/* ul p {
-				color: gray;
-			} */
-/* div p {
-				color: green;
-			} */
-
-/* adjacent slector "+" (the h2 that comes after h1) */
+/* adjacent selector "+" (the h2 that comes right after an h1) */
 h1 + h2 {
-	color: yellow;
+	color: red;
 }
 
-/* html tag selector */
+/* HTML tag selector */
 table {
 	border-collapse: collapse;
-	/* width: 500px; static style */
+	/* 500px is a static unit (unchanged) */
+	/* width: 250px; */
+	/* 50% is a relative unit */
 	width: 50%;
 }
 
 th,
 td {
 	border: 1px solid black;
+	/* color: red; */
 }
 
 ul {
@@ -68,9 +67,10 @@ ul {
 ol {
 	list-style: upper-roman;
 }
+
 .box1 {
-	/* width: 50px;
-	height: 50px; */
+	/* width: 50px; */
+	/* height: 50px; */
 	padding: 20px;
 	border: 10px solid black;
 	margin-bottom: 15px;
@@ -83,37 +83,63 @@ ol {
 	position: relative;
 }
 
-/* -static: default unmovable position
--relative: (allows you to start moving an element) moves relative to 
-its original position
--fixed: move relative to the screen (viewport) need to specify left, right, or top */
-/* -absolute: like fixed, but move relative to its
-nearest positioned center */
+/* 
+- static: default unmoveable position
+- relative: (allows you to start moving an element), moves relative to its original position
+- fixed: move relative to the screen (viewport), need to specify left, top or right, bottom. Also removes element from original DOM flow. (Does not leave a gap where it was originally located)
+- absolute: like 'fixed', but move relative to its nearest positioned ancestor, not the viewport if there is a nearest positioned ancestor - otherwise it will still move relative to the viewport.
+- sticky: will behave normally then switch to 'fixed' when the left, right, top, bottom condition is met and will stick at that position.
+*/
 .box-b {
 	width: 50px;
 	height: 50px;
 	border: 1px solid black;
 	background-color: blueviolet;
-	position: absolute;
-	left: 25px;
-	top: 0px;
+	position: relative;
+	/* left: 25px;
+	top: 25px; */
 }
 
 .box-c {
 	width: 50px;
 	height: 50px;
 	border: 1px solid black;
-	background-color: rgb(43, 171, 226);
-	/* position: relative;
-	right: 50px;
-	top: 50px; */
+	background-color: aqua;
 }
 
 .mock-navigation {
 	width: 100%;
 	height: 50px;
-	/* border: 1px solid black; */
-	background-color: beige;
+	background-color: aquamarine;
 	position: sticky;
 	top: 0px;
+}
+
+body {
+	margin: 0;
+}
+
+.flex-container {
+	display: flex;
+	/* justify-content: space-around; */
+	width: 500px;
+	height: 500px;
+	background-color: aquamarine;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-child {
+	width: 100px;
+	height: 100px;
+	background-color: blueviolet;
+	border: 1px solid black;
+	display: flex;
+}
+
+.flex-gc {
+	width: 25px;
+	height: 25px;
+	background-color: brown;
+	border: 1px solid black;
 }
